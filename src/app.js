@@ -8,6 +8,8 @@
 // This line imports the Express module,
 // a lightweight web application framework for Node.js,
 // which simplifies routing and server handling.
+
+require("dotenv").config();
 const express = require("express");
 
 // This line initializes an Express application and assigns it to the variable app. This app object is used to define routes, middleware, and start the server.
@@ -114,19 +116,28 @@ app.post("/signup", async (req, res) => {
 app.get("/user", async(req,res) => {
       const userEmail = req.body.emailId;
       try{
-        const user = await User.find({
-                emailId: userEmail
-        })
-        res.send(user)
-      }  
+        const users = await User.find({emailId: userEmail})
+        if(users.length === 0){
+                res.status(404).send("User not found");
+        }
+        else{
+        res.send(users)
+      }  }
       catch (err){
         res.status(400).send("Something went wrong")
       }
 })
 
 // Feed API - GET /feed - get all users from database
-app.get("/feed", (req,res) => {
-
+app.get("/feed", async(req,res) => {
+ try{
+        const users = await User.find({})
+        
+        res.send(users)
+      }  
+      catch (err){
+        res.status(400).send("Something went wrong")
+      }
 })
 
 connectDB()
