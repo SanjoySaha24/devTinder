@@ -142,7 +142,7 @@ app.post("/login", async (req, res) => {
       res.send("Login successful!!!");
     }
     else{
-      throw new error("Password not correct")
+      throw new error("Invalid credential")
     }
   }catch(err){
     res.status(400).send("ERROR : " + err.message);
