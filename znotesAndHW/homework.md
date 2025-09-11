@@ -11,3 +11,15 @@ what are dependencies
 use of "-g" while npm install
 difference btween ^ and ~
 
+-s2e4
+initialize git
+.gitignore 
+create a remote repo on github
+play with routes and route extension ex: /hello, /hello/2, /xyz
+order of the routes matter a lot
+install postman and make workspace/collection > test API call
+write logic to handle GET, POST, PATCH, DELETE API calls and test on postman
+Explore routing and use ?, *, (), * in the routes
+Use of regex in routes /a/, /.*fly$/
+Reading query params in the routes
+Reading dynamic routes 
