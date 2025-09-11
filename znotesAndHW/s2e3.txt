@@ -1,0 +1,6 @@
+npm init -> creates package.json
+to create server we use Express JS
+npm i express
+app.use((req, res))
+app.listen
+install nodemon - updates automatically as we change code

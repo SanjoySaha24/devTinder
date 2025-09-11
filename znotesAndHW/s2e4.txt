@@ -1,0 +1,5 @@
+incase we delete node modules, we can again install doing
+npm install - creates node modules folder 
+based on package.json contents it installs all dependencies
+
+git init - initialize git
