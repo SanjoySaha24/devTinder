@@ -3,3 +3,6 @@ npm install - creates node modules folder
 based on package.json contents it installs all dependencies
 
 git init - initialize git
+github
+routes
+Postman
