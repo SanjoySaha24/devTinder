@@ -1,0 +1,2 @@
+GET /users => It checks all the app.xx("matching routes") function
+GET /users => middleware chain => request handler
