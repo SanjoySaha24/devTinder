@@ -1,0 +1,47 @@
+mongodb atlas
+compass connection - refer chatgpt
+mongoose library - npm i mongoose
+
+create schema then mongoose model
+
+how was how did devtinder database and users folder created
+
+The devTinder database and users collection were created automatically by MongoDB and Mongoose when your app first saved a user document.
+
+Here's how it happened:
+
+Database Connection:
+Your app connects to MongoDB using the connection string for the devTinder database.
+
+User Model:
+You defined a Mongoose model called User in user.js.
+
+Saving Data:
+When you called await user.save() in the /signup route, Mongoose created the users collection inside the devTinder database (if it didn't already exist) and inserted the user document.
+
+MongoDB creates databases and collections automatically when you insert data for the first time. That's why you see devTinder and users in MongoDB Compass.
+
+so "users" name was given automatically
+
+Yes, the collection name "users" was given automatically by Mongoose.
+
+When you use
+
+Mongoose creates a collection named "users" (lowercase, pluralized) in MongoDB by default. This is standard Mongoose behavior.
+
+can i change name
+
+Yes, you can change the collection name in Mongoose by passing a third argument to mongoose.model. For example:
+
+example:
+
+Replace "customCollectionName" with your desired collection name. This will create/use that name in MongoDB instead of the default "users".
+
+and how devtinder created
+
+The devTinder database was created automatically by MongoDB when your app first connected and tried to save data.
+
+When you use this connection string:
+
+MongoDB will create the devTinder database if it does not already exist, as soon as you insert or save any data (like a user document). No manual setup is needed—MongoDB handles this automatically.
+

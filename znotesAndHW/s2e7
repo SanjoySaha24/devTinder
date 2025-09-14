@@ -1,0 +1,3 @@
+schema, model, instance of model
+middleware - express json
+it read json object, coverts to JS object, and adds to req.body
