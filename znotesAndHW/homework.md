@@ -75,3 +75,7 @@ add API level validations on Patch request and Signup post api
 Data sanitization - add API validation for each field
 Install validator
 explore the library, functions for password, email, photo url
+
+s2e9
+npm i bcrypt
+26:34
