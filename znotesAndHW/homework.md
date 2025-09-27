@@ -75,7 +75,15 @@ add API level validations on Patch request and Signup post api
 Data sanitization - add API validation for each field
 Install validator
 explore the library, functions for password, email, photo url
+never trust req.body
 
 s2e9
+validate data in signup api
 npm i bcrypt
-26:34
+create passwordHash using bcrypt.hash and save the user with encrypted password
+create login api
+compare passwords & throw errors is email/password invalid
+ 
+s2e10
+expressjs.com cookie
+cookie parser, jwt token, jsonweb token
