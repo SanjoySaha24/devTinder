@@ -85,5 +85,9 @@ create login api
 compare passwords & throw errors is email/password invalid
  
 s2e10
-expressjs.com cookie
-cookie parser, jwt token, jsonweb token
+install cookie parser
+just send a dummy cookie to user
+create GET / profile API and check if you get the cookie back
+install jsonwebtoken
+in login api, after email and password validation, create a JWT token and send it to user in cookies
+read the cookies inside your profile API and find the logged in user 
