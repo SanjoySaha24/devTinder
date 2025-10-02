@@ -196,7 +196,7 @@ app.post("/sendConnectionRequest", userAuth, async(reqq,res) => {
   console.log("sending a connection request");
   
   res.send("Connection request sent")
-}) // 1:17:44
+}) // 1:17:00
 
 connectDB()
   .then(() => {
