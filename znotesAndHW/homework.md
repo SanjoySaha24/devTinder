@@ -91,3 +91,14 @@ create GET / profile API and check if you get the cookie back
 install jsonwebtoken
 in login api, after email and password validation, create a JWT token and send it to user in cookies
 read the cookies inside your profile API and find the logged in user 
+userAuth middleware
+add the userAuth middleware in profile API
+and a new send connection Request api
+set the expiry of jwt token and cookies to 7 days 
+create userSchema method to getJWT()
+create userSchema method to comparepassword(passwordInputByUser)
+
+s2e11
+- explore tinder APIs
+- create a list all API you can think of in dev tinder
+- group multiple routes under respective routers
