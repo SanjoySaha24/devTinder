@@ -102,3 +102,7 @@ s2e11
 - explore tinder APIs
 - create a list all API you can think of in dev tinder
 - group multiple routes under respective routers
+- read documentation for express.router
+- create routes folder for managing auth, profile, request router
+- create auth, profile, request Router
+- import these routers in app.js
