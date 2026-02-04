@@ -4,8 +4,6 @@ const { validateSignUpData } = require("../utills/validation");
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 
-// 47:02
-
 // Create a user
 authRouter.post("/signup", async (req, res) => {
   try {
@@ -57,6 +55,7 @@ authRouter.post("/login", async (req, res) => {
   }
 });
 
+// code given by chatgpt
 authRouter.post("/logout", async (req, res) => {
   try {
     // Clear the auth cookie and respond
@@ -66,5 +65,14 @@ authRouter.post("/logout", async (req, res) => {
     res.status(400).send("Error : " + err.message);
   }
 });
+
+// below code is by Akshay, to use this code at first clear login cookie from postman then use it
+// authRouter.post("/logout", async (req, res) => {
+  
+//     res.clearCookie("token", null,{
+//       expires: new DataTransfer(Date.now()),
+//     });
+//     res.send("Logout Successfull")
+//     })
 
 module.exports = authRouter;
