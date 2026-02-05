@@ -1,0 +1,2 @@
+quickstart -> guides -> validation
+read about enum in mongoose schema doc
