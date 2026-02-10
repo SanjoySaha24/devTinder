@@ -1,2 +1,7 @@
 quickstart -> guides -> validation
 read about enum in mongoose schema doc
+
+connectionRequest.js
+
+quickstart -> guides -> Middleware
+ read about Pre
