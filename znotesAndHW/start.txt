@@ -1,0 +1,4 @@
+open mongodb, add current ip address
+open mongodb compass, connect
+open vs code, run npm run dev
+for postman, first start postman agent, then start postman 
