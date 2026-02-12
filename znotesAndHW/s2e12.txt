@@ -5,3 +5,10 @@ connectionRequest.js
 
 quickstart -> guides -> Middleware
  read about Pre
+
+ 01:17:00 index
+ quickstart -> guides -> SchemaTypes
+ read about indexes
+
+search Compound index in mongodb
+quickstart -> API -> Schema -> Schema.prototype.index()

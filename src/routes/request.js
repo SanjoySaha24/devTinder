@@ -46,11 +46,12 @@ requestRouter.post("/request/send/:status/:toUserId", userAuth, async(req,res) =
       message: req.user.firstName + " is " + status + " in " + toUser.firstName,
       data,
     })
- } // 01:16:00
+ } 
  catch(err){
   res.status(400).send("ERROR: " + err.message);
  }
 }
 ) 
 
+// 00:03:00 s2ep13
 module.exports = requestRouter

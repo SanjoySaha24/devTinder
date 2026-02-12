@@ -20,6 +20,9 @@ const connectionRequestSchema = new mongoose.Schema({
 {timestamps: true}
 )
 
+// compound index
+connectionRequestSchema.index({fromUserId: 1, toUserId: 1})
+
 // while saving connection request
 connectionRequestSchema.pre("save", function (next){
     const connectionRequest = this;

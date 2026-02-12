@@ -6,18 +6,18 @@ const bcrypt = require("bcrypt")
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: String,  
+        required: true,  
         minLength: 4,
-        mixLength: 50,
+        maxLength: 50,
     },
     lastName: {
-        type: String   
+        type: String,   
     },
     emailId: {
         type: String,
+        lowercase:true,
         required: true,
         unique:true,
-        lowercase:true,
         trim:true,
         validate(value){
             if(!validator.isEmail(value)){
@@ -71,6 +71,9 @@ const userSchema = new mongoose.Schema({
     timestamps: true,
 }
 )
+
+// userSchema.index({firstName: 1, lastName: 1})
+
 userSchema.methods.getJWT = async function (){
     const user = this;
     const token = await jwt.sign({ _id: user._id }, "DEV@Tinder$790", 
