@@ -53,5 +53,46 @@ requestRouter.post("/request/send/:status/:toUserId", userAuth, async(req,res) =
 }
 ) 
 
-// 00:03:00 s2ep13
+requestRouter.post("/request/review/:status/:requestId", userAuth, async(req,res) => {
+  try{
+    const loggedInUser = req.user;
+    const {status, requestId} = req.params;
+
+console.log({ requestId, loggedInUserId: loggedInUser._id.toString(), status });
+
+   const allowedStatus = ["accepted", "rejected"];
+  if (!allowedStatus.includes(status)) {
+  return res.status(400).json({ message: "Status not allowed" });
+}
+
+const byId = await ConnectionRequest.findById(requestId);
+console.log("requestDoc:", byId);
+console.log("loggedInUserId:", loggedInUser._id.toString());
+// 00:30:00
+const connectionRequest = await ConnectionRequest.findOne({
+  _id: requestId,
+  toUserId: loggedInUser._id,
+  status: "interested",
+});
+
+    if(!connectionRequest){
+      return res.status(404).json({message:"Connection request not found"})
+    }
+    connectionRequest.status = status
+    const data = await connectionRequest.save()
+    res.json({message: "Connection request " + status, data})
+
+    // theory:
+    // validate the status
+    // Akshay => Elon
+    // loggedInId = toUserId
+    // status = interested
+    // request Id should be valid
+  }
+  catch(err){
+    res.status(400).send("ERROR: " + err.message)
+  } 
+}
+)
+
 module.exports = requestRouter
