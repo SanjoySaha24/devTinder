@@ -121,3 +121,7 @@ s2e12
 - read more about indexes in MongoDB and read article
 - why do we need index in DB
 - adv and disadv of creating index
+
+s2e13
+- write code with proper validation for POST /request/review/:status/:requestId
+- thought process of POST vs GET

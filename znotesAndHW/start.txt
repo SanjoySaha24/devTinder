@@ -2,3 +2,18 @@ open mongodb, add current ip address
 open mongodb compass, connect
 open vs code, run npm run dev
 for postman, first start postman agent, then start postman 
+
+users:
+{
+        "firstName": "Sanjoy",
+        "lastName": "Saha",
+        "emailId":"sanjoy@1234.com",
+        "password":"Wersdf@1",
+        698ebf9edfc0f7737565ef1f
+        }
+{
+        "emailId":"shivam@123.com",
+        "password":"dube_$@123"
+        68e24b3d89834b3255b6661f
+    }
+

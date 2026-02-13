@@ -58,17 +58,18 @@ requestRouter.post("/request/review/:status/:requestId", userAuth, async(req,res
     const loggedInUser = req.user;
     const {status, requestId} = req.params;
 
-console.log({ requestId, loggedInUserId: loggedInUser._id.toString(), status });
+// console.log({ requestId, loggedInUserId: loggedInUser._id.toString(), status });
 
-   const allowedStatus = ["accepted", "rejected"];
+  const allowedStatus = ["accepted", "rejected"];
   if (!allowedStatus.includes(status)) {
   return res.status(400).json({ message: "Status not allowed" });
 }
 
-const byId = await ConnectionRequest.findById(requestId);
-console.log("requestDoc:", byId);
-console.log("loggedInUserId:", loggedInUser._id.toString());
+// const byId = await ConnectionRequest.findById(requestId);
+// console.log("requestDoc:", byId);
+// console.log("loggedInUserId:", loggedInUser._id.toString());
 // 00:30:00
+
 const connectionRequest = await ConnectionRequest.findOne({
   _id: requestId,
   toUserId: loggedInUser._id,
