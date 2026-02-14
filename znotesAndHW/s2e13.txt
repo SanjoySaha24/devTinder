@@ -2,4 +2,41 @@ request.js
 /request/review/:status/:requestId
 
 00:20:00
-maybe issue in code, accept/reject not working
+http://localhost:7777/request/review/rejected/here we have to pass request object id and not profile id
+http://localhost:7777/request/review/accepted/here we have to pass request object id and not profile id
+
+ref and populate
+mongoose -> API -> schematype -> SchemaType.prototype.ref()
+mongoose -> Guides -> Populate 
+
+users:
+{
+        "firstName": "Sanjoy",
+        "lastName": "Saha",
+        "emailId":"sanjoy@1234.com",
+        "password":"Wersdf@1",
+        698ebf9edfc0f7737565ef1f
+}
+{
+        "firstName": "Virat",
+        "lastName": "Kohli",
+        "emailId":"virat123@gmail.com",
+        "password":"Wersdf@1",
+        "gender": "male"
+        699045caa1deefb2ded0e04b
+}
+{
+        "firstName": "Rohit",
+        "lastName": "Sharma",
+        "emailId":"rohit123@gmail.com",
+        "password":"Wersdf@1",
+        "gender": "male"
+        69904685a1deefb2ded0e04f
+}
+
+trial:
+sanjoy sent to virat 
+rohit sent to virat 
+
+virat accepted sanjoy, sanjoy is a connection
+virat rejected rohit, rohit is not a connection
