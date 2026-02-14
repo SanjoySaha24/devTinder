@@ -125,3 +125,7 @@ s2e12
 s2e13
 - write code with proper validation for POST /request/review/:status/:requestId
 - thought process of POST vs GET
+- read about ref and populate
+- create GET /user/requests/receive with all the checks
+- create GET /user/connections
+- read about query in mongodb doc
