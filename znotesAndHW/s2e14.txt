@@ -1,0 +1,8 @@
+building feed api in user.js
+// - user should see all the user cards except
+        // 0. his own card
+        // 1. his connections card
+        // 2. ignored people
+        // 3. already sent the connection request
+
+
