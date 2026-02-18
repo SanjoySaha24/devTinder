@@ -13,6 +13,7 @@
 ## connectionRequestRouter
 - POST /request/send/interested/:userId
 - POST /request/send/ignored/:userId
+
 instead we use dynamic API - POST /request/send/:status/:userId
 
 - POST /request/review/accepted/:requestId
@@ -24,4 +25,4 @@ instead we use dynamic API - POST /request/review/:status/:requestId
 - GET /user/connections
 - GET /user/feed - gets you profile of other users on platform
 
-Status: ignore, interested, accepted, rejected
+Status: ignored, interested, accepted, rejected

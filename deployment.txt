@@ -1,0 +1,18 @@
+deployment
+
+signup on aws
+launch instance
+
+got to git bash
+got to downloads using command $ cd ~/Downloads
+ls
+chmod 400 "secret.pem"
+ssh -i "devTinder-secret.pem" ubuntu@ec2-75-101-251-27.compute-1.amazonaws.com
+install node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+exit
+nvm install v24.11.0
+
+
+alexnew23@gmail.com
+Alzm@123
