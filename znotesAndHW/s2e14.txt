@@ -6,3 +6,12 @@ building feed api in user.js
         // 3. already sent the connection request
 
 
+npm i cors from devtinderui part 2, 00:26:00
+added 
+app.use(cors(
+  {
+    origin: "http://localhost:5173",
+    credentials: true,
+  }
+));
+using chatgpt for login 
